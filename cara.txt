@@ -1,0 +1,8 @@
+Beberapa  Tools Phising 
+
+Command for install 
+• apt-get update && apt-get upgrade
+• apt-get install ruby figlet git python2
+• git clone https://github.com/medcoli/phising
+• cd phising
+• bash m3d
