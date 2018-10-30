@@ -1,0 +1,158 @@
+ #!/usr/bin/bash
+a='\e[1;31m'
+b='\e[1;32m'
+c='\e[1;33m'
+d='\e[1;34m'
+e='\e[1;35m'
+f='\e[1;36m'
+g='\e[1;37m'
+NOW=`date "+%d.%m.%Y"`
+TIME=`date "+%H:%M"`
+python2 m3d.py
+clear
+figlet -f slant "M3D" |lolcat
+ echo    "======================================"|lolcat
+ echo      " AUTHOR      : M3D"|lolcat
+ echo      " Tools       : Brute Upload"|lolcat
+ echo      " Whatsapp    : 081353398031 "|lolcat
+ echo      " Date        : " $NOW | lolcat
+ echo      " Time        : " $TIME | lolcat
+ echo    "======================================"|lolcat
+sleep 1
+echo -e $b '    <<=======>>[M3D]<<=======>>'
+sleep 1
+echo '      Pilihlah Sesuai Keinginan Kamu'
+echo -e $f '<<====================================>>'
+echo -e $a ' [01] Install Weeman'
+echo -e $b ' [02] Install shellphish'
+echo -e $c ' [03] Install blackeye'
+echo -e $d ' [04] Install SocialFish'
+echo -e $e ' [05] Install PhisingGame'
+echo -e $f ' [06] Install Ngrok'
+echo -e $g ' [07] Download SC Phising coc By GxDDP'
+echo '  [00] Keluar'
+echo -e $f "<<====================================>>"
+read -p " [M3D]==>> " med;
+
+if [ $med = 1 ] || [ $med = 01 ]
+then
+clear
+echo -e $a '<<=====[Install]=====>>'
+apt-get install python2 -y
+apt-get install git -y
+cd $HOME
+git clone https://github.com/evait-security/weeman
+clear
+cd weeman
+chmod 777 weeman.py
+python2 weeman.py;
+fi
+
+if [ $med = 2 ] || [ $med = 02 ]
+then
+clear
+echo -e $b '<<=====[Install]=====>>'
+cd $HOME
+apt-get install git -y
+git clone https://github.com/thelinuxchoice/shellphish
+clear
+cd shellphish
+bash shellphish.sh
+fi
+
+if [ $med = 3 ] || [ $med = 03 ]
+then
+clear
+echo -e $c '<<=====[Install]=====>>'
+apt-get install git -y
+cd $HOME
+git clone https://github.com/thelinuxchoice/blackeye
+clear
+cd blackeye
+bash blackeye.sh
+fi
+
+if [ $med = 4 ] || [ $med = 04 ]
+then
+clear
+echo -e $d '<<=====[Install]=====>>'
+apt-get install python2 git php curl -y
+cd $HOME
+git clone https://github.com/UndeadSec/SocialFish
+cd socialfish
+pip2 install -r requirements.txt
+clear
+python2 SocialFish.py
+fi
+
+if [ $med = 5 ] || [ $med = 05 ]
+then
+clear
+echo -e $e '<<=====[Install]=====>>'
+apt-get install python2 -y
+apt-get install apache2 -y
+apt-get install php -y
+apt-get install git -y
+cd $HOME
+git clone https://github.com/Senitopeng/PhisingGame.git
+clear
+cd PhisingGame
+python2 phising.py
+fi
+
+if [ $med = 6 ] || [ $med = 06 ]
+then
+clear
+echo -e $f '<<=====[Install]=====>>'
+apt-get install wget -y
+mkdir ngrok
+cd ~/ngrok
+wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
+mv ngrok-stable-linux-arm.zip $HOME
+$HOME/unzip ngrok-stable-linux-arm.zip
+cd ~/
+clear
+clear
+exit
+fi
+
+if [ $med = 7 ] || [ $med = 07 ]
+then
+clear
+echo -e $b 'Masukkan Alamat Internal Kamu'
+echo -e $c 'Contoh: /sdcard'
+read -p "[BangZat]=>> " internal
+cd $internal
+git clone https://github.com/BangZatters/ScriptCOC
+echo -e $e 'Dah Selesai'
+sleep 1
+echo -e $a 'Coba Cek Internal Kamu'
+echo -e $d 'Nama Folder = ScriptCOC'
+exit
+fi
+
+if [ $med = 0 ] || [ $med = 00 ]
+then
+echo -e $a 'Yakin Ingin Keluar'
+echo -e $c ' Yaudah Silahkan Pilih'
+sleep 1
+echo -e $b '( Y ) Untuk Keluar dan ( N ) Untuk Netap | Lalu Enter'
+read -p " [Y/N]=>> " out
+fi
+
+if [ $out = Y ]
+then
+echo -e $d 'Ok Selamat Tinggal'
+sleep 1
+echo -e $f 'Jangan Kangen Sama Gua Ya'
+sleep 1
+clear
+exit
+fi
+
+if [ $out = N ]
+then
+echo -e $e 'Selamat Datang Kembali'
+sleep 1
+bash m3d
+fi
